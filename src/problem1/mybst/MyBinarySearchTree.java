@@ -22,7 +22,7 @@ public class MyBinarySearchTree {
         if (root == null) {
             return;
         }
-        preOrderString.append(root.getKey() + " ");
+        preOrderString.append(root.getValue() + " ");
         preOrder(root.getLeft());
         preOrder(root.getRight());
     }
@@ -35,9 +35,9 @@ public class MyBinarySearchTree {
         if (treeRoot == null) {
             return new TreeNode(addingValue);
         }
-        if (addingValue < treeRoot.getKey()) {
+        if (addingValue < treeRoot.getValue()) {
             treeRoot.setLeft(addService(treeRoot.getLeft(), addingValue));
-        } else if (addingValue == treeRoot.getKey()) {
+        } else if (addingValue == treeRoot.getValue()) {
             return treeRoot;
         } else {
             treeRoot.setRight(addService(treeRoot.getRight(), addingValue));
@@ -52,6 +52,6 @@ public class MyBinarySearchTree {
         }
         postOrder(root.getLeft());
         postOrder(root.getRight());
-        System.out.print(root.getKey() + " ");
+        System.out.print(root.getValue() + " ");
     }
 }

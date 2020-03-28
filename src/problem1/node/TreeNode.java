@@ -7,20 +7,20 @@
 package problem1.node;
 
 public class TreeNode {
-    private int key;
+    private int value;
     private TreeNode left, right;
 
     public TreeNode(int element) {
-        key = element;
+        value = element;
         left = right = null;
     }
 
-    public int getKey() {
-        return key;
+    public int getValue() {
+        return value;
     }
 
-    public void setKey(int key) {
-        this.key = key;
+    public void setValue(int value) {
+        this.value = value;
     }
 
     public TreeNode getLeft() {
