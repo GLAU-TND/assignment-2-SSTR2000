@@ -11,28 +11,28 @@ import problem3.node.Node;
 public class MyPriorityQueue {
     private Node rear;
     private Node front;
-    private int size;
+    private int length;
 
     public MyPriorityQueue() {
         front = null;
         rear = null;
-        size = 0;
+        length = 0;
     }
 
     public void enqueue(Node addData) {
         if (front == null) {
             rear = addData;
             front = addData;
-            size++;
+            length++;
         } else {
             if (addData.getData().getRollNumber() >= this.rear.getData().getRollNumber()) {
                 rear.setNext(addData);
                 rear = addData;
-                size++;
+                length++;
             } else if (addData.getData().getRollNumber() <= this.front.getData().getRollNumber()) {
                 addData.setNext(this.front);
                 this.front = addData;
-                size++;
+                length++;
             } else {
                 Node temp = this.front;
                 Node tempPrevious = this.front;
@@ -45,20 +45,20 @@ public class MyPriorityQueue {
                 }
                 tempPrevious.setNext(addData);
                 addData.setNext(temp);
-                size++;
+                length++;
 
             }
         }
     }
 
     public int getSize() {
-        return size;
+        return length;
     }
 
     public void printQueue() {
         Node temp = this.front;
-        for (int i = 0; i < this.size; i++) {
-            if (i != this.size - 1) {
+        for (int i = 0; i < this.length; i++) {
+            if (i != this.length - 1) {
                 System.out.print(temp.getData().toString() + "--->");
                 temp = temp.getNext();
             } else {
@@ -68,4 +68,3 @@ public class MyPriorityQueue {
     }
 }
 
-}
