@@ -8,29 +8,29 @@ package problem5.student;
 // to store student information and properties
 
 public class Student {
-    private int rollNumber;
+    private int roll;
     private String Name;
     private int backLogCounter;
     private int appearingCounter;
 
-    public Student(int rollNumber, String name) {
-        this.rollNumber = rollNumber;
+    public Student(int roll, String name) {
+        this.roll = roll;
         Name = name;
     }
 
-    public Student(int rollNumber, String name, int backLogCounter, int appearingCounter) {
-        this.rollNumber = rollNumber;
+    public Student(int roll, String name, int backLogCounter, int appearingCounter) {
+        this.roll = roll;
         Name = name;
         this.backLogCounter = backLogCounter;
         this.appearingCounter = appearingCounter;
     }
 
-    public int getRollNumber() {
-        return rollNumber;
+    public int getRoll() {
+        return roll;
     }
 
-    public void setRollNumber(int rollNumber) {
-        this.rollNumber = rollNumber;
+    public void setRoll(int roll) {
+        this.roll = roll;
     }
 
     public String getName() {
@@ -60,14 +60,14 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "rollNumber=" + rollNumber +
+                "rollNumber=" + roll +
                 ", Name='" + Name + '\'' +
                 '}';
     }
 
     public String toStrings() {
         return "Student{" +
-                "rollNumber=" + rollNumber +
+                "roll=" + roll +
                 ", Name='" + Name + '\'' +
                 ", backLogCounter=" + backLogCounter +
                 ", appearingCounter=" + appearingCounter +
