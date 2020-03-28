@@ -1,20 +1,20 @@
 package problem4.myqueue;
 
 public class Node {
-    private int data;
+    private int info;
     private Node next;
 
-    public Node(int data) {
-        this.data = data;
+    public Node(int info) {
+        this.info = info;
         next = null;
     }
 
-    public int getData() {
-        return data;
+    public int getInfo() {
+        return info;
     }
 
-    public void setData(int data) {
-        this.data = data;
+    public void setInfo(int info) {
+        this.info = info;
     }
 
     public Node getNext() {
